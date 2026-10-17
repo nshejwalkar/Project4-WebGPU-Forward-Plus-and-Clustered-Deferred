@@ -41,7 +41,7 @@ export class Lights {
 
         this.lightSetStorageBuffer = device.createBuffer({
             label: "lights",
-            size: 16 + this.lightsArray.byteLength, // 16 for numLights + padding. must match the Cluster structe in common.wgsl
+            size: 16 + this.lightsArray.byteLength, // 16 for numLights + padding. must match the Cluster struct in common.wgsl
             usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         });
         this.populateLightsBuffer();
